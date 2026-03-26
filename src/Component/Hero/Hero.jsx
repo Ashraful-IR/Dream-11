@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className='bg-[url("/src/assets/bg-shadow.png")] bg-cover bg-center w-full h-full flex items-center justify-center bg-[#131313] flex-col gap-10 p-10 rounded-lg'>
+    <div className='bg-[url("/src/assets/bg-shadow.png")] bg-cover bg-center w-full h-full flex items-center justify-center bg-[#131313] flex-col gap-10 p-10 rounded-2xl'>
       <div className="container mx-auto flex flex-col items-center justify-center text-center">
         <img src="/src/assets/banner-main.png" alt="" />
       </div>

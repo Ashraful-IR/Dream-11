@@ -1,0 +1,50 @@
+[
+  {
+    "playerName": "Virat Kohli",
+    "playerType": "Batsman",
+    "price": 1200000,
+    "image": "https://example.com/images/virat.jpg",
+    "country": "India",
+    "playingStyle": "Right-hand bat"
+  },
+  {
+    "playerName": "Babar Azam",
+    "playerType": "Batsman",
+    "price": 1100000,
+    "image": "https://example.com/images/babar.jpg",
+    "country": "Pakistan",
+    "playingStyle": "Right-hand bat"
+  },
+  {
+    "playerName": "Ben Stokes",
+    "playerType": "All-Rounder",
+    "price": 1500000,
+    "image": "https://example.com/images/stokes.jpg",
+    "country": "England",
+    "playingStyle": "Left-hand bat, Right-arm fast-medium"
+  },
+  {
+    "playerName": "Shakib Al Hasan",
+    "playerType": "All-Rounder",
+    "price": 1400000,
+    "image": "https://example.com/images/shakib.jpg",
+    "country": "Bangladesh",
+    "playingStyle": "Left-hand bat, Slow left-arm orthodox"
+  },
+  {
+    "playerName": "Mitchell Starc",
+    "playerType": "Bowler",
+    "price": 1300000,
+    "image": "https://example.com/images/starc.jpg",
+    "country": "Australia",
+    "playingStyle": "Left-arm fast"
+  },
+  {
+    "playerName": "Jasprit Bumrah",
+    "playerType": "Bowler",
+    "price": 1350000,
+    "image": "https://example.com/images/bumrah.jpg",
+    "country": "India",
+    "playingStyle": "Right-arm fast"
+  }
+]

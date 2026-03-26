@@ -1,6 +1,8 @@
 import './App.css'
 import Hero from './Component/Hero/Hero'
 import Navbar from './Component/NavBar/Navbar'
+import { Suspense } from 'react';
+
 
 function App() {
 
@@ -9,11 +11,10 @@ function App() {
       <header className='container mx-auto'>
         <Navbar />
       </header>
-      <main className='container mx-auto my-10'>
+      <main className='container mx-auto my-10 space-y-8'>
           <Hero />
       </main>
       <footer className='container mx-auto'>
-        <p>&copy; 2023 My Website. All rights reserved.</p>
       </footer>
     </>
   )

@@ -1,9 +1,10 @@
 import "./App.css";
 import Hero from "./Component/Hero/Hero";
 import Navbar from "./Component/NavBar/Navbar";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import Players from "./Component/Players/Players";
 import { DiVim } from "react-icons/di";
+import { ToastContainer, Bounce } from "react-toastify";
 
 const fetchPlayers = async () => {
   const response = await fetch("/data.json");
@@ -13,11 +14,12 @@ const fetchPlayers = async () => {
 
 function App() {
   const playersData = fetchPlayers();
+  const [coin, setCoin] = useState(10000000);
 
   return (
     <>
       <header className="sticky top-0 z-10">
-        <Navbar />
+        <Navbar coin={coin} />
       </header>
       <main className="container mx-auto my-10 space-y-8">
         <Hero />
@@ -30,10 +32,24 @@ function App() {
             </div>
           }
         >
-          <Players playersData={playersData} />
+          <Players playersData={playersData} setCoin={setCoin} coin={coin} />
         </Suspense>
       </main>
       <footer className="container mx-auto"></footer>
+
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition={Bounce}
+      />
     </>
   );
 }

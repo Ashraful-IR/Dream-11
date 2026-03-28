@@ -1,11 +1,14 @@
 import React, { use, useState } from "react";
 import { FaFlag, FaUser } from "react-icons/fa";
+import AvailablePlayers from "../AvailablePlayers/AvailablePlayers";
+import SelectedPlayers from "../SelectedPlayers/SelectedPlayers";
 
-const Players = ({ playersData }) => {
+const Players = ({ playersData, setCoin, coin }) => {
   const players = use(playersData);
   console.log(players);
 
   const [active, setActive] = useState("available");
+  const [selectedPlayers, setSelectedPlayers] = useState([]);
 
   return (
     <div className="space-y-10">
@@ -15,7 +18,7 @@ const Players = ({ playersData }) => {
             Available Players ({players.length})
           </p>
         ) : (
-          <p className="text-xl font-bold text-black">Selected Players</p>
+          <p className="text-xl font-bold text-black">Selected Players ({selectedPlayers.length} / {players.length})</p>
         )}
         <div>
           <button
@@ -28,58 +31,25 @@ const Players = ({ playersData }) => {
             className={`btn ${active === "selected" ? "bg-[#e7fe29]" : ""} rounded-r-xl rounded-l-none`}
             onClick={() => setActive("selected")}
           >
-            Selected
+            Selected ({selectedPlayers.length})
           </button>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {players.map((player) => {
-          return (
-            <div
-              key={player.id}
-              className="card bg-base-100  shadow-sm border border-gray-950"
-            >
-              <figure className=" container mx-auto p-3">
-                <img
-                  className="rounded-xl"
-                  src={player.image}
-                  alt={player.name}
-                />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">
-                  <FaUser /> {player.playerName}
-                </h2>
-                <div className="flex justify-between items-center gap-4 ">
-                  <div className="flex justify-between items-center gap-2 ">
-                    <FaFlag /> {player.country}
-                  </div>
-                  <span className="border border-gray-100 bg-gray-50 rounded-md p-1">
-                    {player.role}
-                  </span>
-                </div>
-                <div className="border border-gray-100 w-full"></div>
-                <h2 className="card-title">Rating: {player.rating}</h2>
-                <div className="flex justify-between items-center gap-4 ">
-                  <div className="card-title flex justify-between items-center gap-2 ">
-                    {player.playingStyle}
-                  </div>
-                  <span className="">{player.bowlingStyle}</span>
-                </div>
-                <div className="flex justify-between items-center gap-4 ">
-                  <div className="card-title flex justify-between items-center gap-2 ">
-                    Price: ${player.price}
-                  </div>
-                  <span className="btn btn-ghost border border-gray-100 bg-gray-50 rounded-md p-1">
-                    Choose Player
-                  </span>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      {active === "available" ? (
+        <AvailablePlayers
+          playersData={playersData}
+          setCoin={setCoin}
+          coin={coin}
+          selectedPlayers={selectedPlayers}
+          setSelectedPlayers={setSelectedPlayers}
+        />
+      ) : (
+        <SelectedPlayers
+          playersData={playersData}
+          selectedPlayers={selectedPlayers} setActive={setActive}
+        />
+      )}
     </div>
   );
 };

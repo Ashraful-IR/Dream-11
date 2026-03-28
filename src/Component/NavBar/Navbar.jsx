@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = () => {
+const Navbar = ({ coin}) => {
   return (
     <div className="container mx-auto navbar bg-base-100 shadow-sm justify-between items-center space-x-5 ">
       <div className="navbar-start">
@@ -61,7 +61,7 @@ const Navbar = () => {
         </ul>
       </div>
       <a className="btn rounded-2xl">
-        0 Coin <img src="/src/assets/dollar 1.png" alt="" />
+        {coin} Coin <img src="/src/assets/dollar 1.png" alt="" />
       </a>
     </div>
   );

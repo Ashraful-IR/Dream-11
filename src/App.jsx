@@ -5,6 +5,7 @@ import { Suspense, useState } from "react";
 import Players from "./Component/Players/Players";
 import { DiVim } from "react-icons/di";
 import { ToastContainer, Bounce } from "react-toastify";
+import Footer from "./Component/Footer/Footer";
 
 const fetchPlayers = async () => {
   const response = await fetch("/data.json");
@@ -35,7 +36,9 @@ function App() {
           <Players playersData={playersData} setCoin={setCoin} coin={coin} />
         </Suspense>
       </main>
-      <footer className="container mx-auto"></footer>
+      <footer >
+        <Footer />
+      </footer>
 
       <ToastContainer
         position="top-right"

@@ -5,7 +5,8 @@
     "price": 1200000,
     "image": "https://example.com/images/virat.jpg",
     "country": "India",
-    "playingStyle": "Right-hand bat"
+    "playingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
   },
   {
     "playerName": "Babar Azam",
@@ -13,7 +14,8 @@
     "price": 1100000,
     "image": "https://example.com/images/babar.jpg",
     "country": "Pakistan",
-    "playingStyle": "Right-hand bat"
+    "playingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm off-spin"
   },
   {
     "playerName": "Ben Stokes",
@@ -21,7 +23,8 @@
     "price": 1500000,
     "image": "https://example.com/images/stokes.jpg",
     "country": "England",
-    "playingStyle": "Left-hand bat, Right-arm fast-medium"
+    "playingStyle": "Left-hand bat, Right-arm fast-medium",
+    "bowlingStyle": "Left-arm fast"
   },
   {
     "playerName": "Shakib Al Hasan",
@@ -29,7 +32,8 @@
     "price": 1400000,
     "image": "https://example.com/images/shakib.jpg",
     "country": "Bangladesh",
-    "playingStyle": "Left-hand bat, Slow left-arm orthodox"
+    "playingStyle": "Left-hand bat",
+    "bowlingStyle": "Slow left-arm orthodox"
   },
   {
     "playerName": "Mitchell Starc",
@@ -37,7 +41,8 @@
     "price": 1300000,
     "image": "https://example.com/images/starc.jpg",
     "country": "Australia",
-    "playingStyle": "Left-arm fast"
+    "playingStyle": "Left-Hand bat",
+    "bowlingStyle": "Left-arm fast"
   },
   {
     "playerName": "Jasprit Bumrah",
@@ -45,6 +50,7 @@
     "price": 1350000,
     "image": "https://example.com/images/bumrah.jpg",
     "country": "India",
-    "playingStyle": "Right-arm fast"
+    "playingStyle": "Right-hand bat",
+    "bowlingStyle": "Right-arm fast"
   }
 ]

@@ -1,10 +1,11 @@
 import React from "react";
+import footerLogo from "/src/assets/logo-footer.png";
 
 const Footer = () => {
   return (
     <div className="container mx-auto bg-[#06091a] ">
       <div className="flex justify-center items-center">
-        <img src="/src/assets/logo-footer.png" alt="" />
+        <img src={footerLogo} alt="" />
       </div>
       <div className="flex justify-between items-center gap-6 px-40 py-10 ">
         <div className="flex flex-col justify-between items-start gap-4 p-5 ">

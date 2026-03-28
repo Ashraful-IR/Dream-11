@@ -1,4 +1,6 @@
 import React from "react";
+import logoImage from "/src/assets/logo.png";
+import dollarImage from "/src/assets/dollar 1.png";
 
 const Navbar = ({ coin}) => {
   return (
@@ -41,7 +43,7 @@ const Navbar = ({ coin}) => {
           </ul>
         </div>
         <a className="btn btn-ghost w-20 hidden md:flex">
-          <img src="/src/assets/logo.png" alt="" />
+          <img src={logoImage} alt="" />
         </a>
       </div>
       <div className="navbar-end hidden md:flex">
@@ -61,7 +63,7 @@ const Navbar = ({ coin}) => {
         </ul>
       </div>
       <a className="btn rounded-2xl">
-        {coin} Coin <img src="/src/assets/dollar 1.png" alt="" />
+        {coin} Coin <img src={dollarImage} alt="" />
       </a>
     </div>
   );
